@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 86px;
+}
+
+.text-box, .card-box {
+    align-self: center;
+}
+
+.card {
+    padding: 32px 36px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 9px;
+    box-shadow: 0 6px 0 0 hsla(0, 38%, 52%, 0.6);
+}
+
+.card form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+input {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 4px;
+    outline: none;
+    color: hsl(249, 10%, 26%) ;
+    border: 1px solid hsl(246, 25%, 77%);
+}
+
+input:focus {
+    border: 1px solid hsl(248, 32%, 49%);
+}
+
+input::placeholder {
+    color: hsl(246, 25%, 77%);
+}
+
+.claim {
+    text-transform: uppercase;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    background-color: hsl(154, 59%, 51%);
+    box-shadow: 0 4px 0 0 hsl(154, 57%, 41%);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.claim:hover {
+    background-color: hsl(154, 59%, 66%);
+}
+
+.claim:active {
+    transform: translateY(6px);
+    box-shadow: none;
+}
+
+.terms-msg {
+    color: hsl(246, 25%, 77%);
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.terms {
+    color: hsl(0, 100%, 74%);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.terms:hover {
+    color: hsl(0, 94%, 68%);
+    text-decoration: underline;
+}
+
+.card-msg {
+    width: 100%;
+    padding: 12px 24px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 0 0 hsla(0, 38%, 52%, 0.6);
+    background-color: hsl(248, 32%, 49%);
+}
+
+.error input {
+    border: 1px solid hsl(0, 100%, 74%);
+    background: url('images/icon-error.svg') no-repeat calc(100% - 30px);
+}
+
+.error input::placeholder {
+    color: hsl(0, 100%, 74%);
+}
+
+.error span{
+    display: block;
+    color: hsl(0, 100%, 74%);
+    text-align: right;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 4px 0 16px;
+}
+
+@media (max-width: 60em) {
+    main {
+        height: auto;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        overflow-y: hidden;
+    }
+
+    h1, p {
+        text-align: center;
+    }
+}
